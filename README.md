@@ -1,14 +1,14 @@
-# Discord ReactionRole client
+# Discord Report Bot
 
-![totalDownloads](https://img.shields.io/npm/dt/reaction-role?style=for-the-badge)
-![weeklyDownloads](https://img.shields.io/npm/dw/reaction-role?style=for-the-badge)
-![version](https://img.shields.io/npm/v/reaction-role?style=for-the-badge)
-![license](https://img.shields.io/npm/l/reaction-role?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/barbarbar338/reaction-role?style=for-the-badge)
+![totalDownloads](https://img.shields.io/npm/dt/report-bot?style=for-the-badge)
+![weeklyDownloads](https://img.shields.io/npm/dw/report-bot?style=for-the-badge)
+![version](https://img.shields.io/npm/v/report-bot?style=for-the-badge)
+![license](https://img.shields.io/npm/l/report-bot?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/barbarbar338/report-bot?style=for-the-badge)
 
 # What is this?
 
-ReportBot is a module that allows you to create Discord reports easily!
+**ReportBot** is a module that allows you to create Discord Daily Reports easily!
 
 You can add which role of users can report and in the end of the day the bot will display which users finished their reports which not.
 
@@ -18,8 +18,7 @@ You also don't need to write any bot code if you want! You can also use this mod
 
 # Installation
 
-`npm i reportbot --save`
-
+`npm i report-bot --save`
 
 # IMPORTANT NOTE
 
@@ -27,12 +26,12 @@ You have to turn on "Server Members Intent" option to use this package properly.
 
 ![ReactionRoleWarningImage](https://raw.githubusercontent.com/barbarbar338/lib/master/personal_page/images/reaction-role-warning.png)
 
-## [Usage](https://reactionrole.bariscodes.me/)
+## [Usage](#)
 
-See [documentation](https://reactionrole.bariscodes.me/) for detailed information!
+See [documentation](#) for detailed information!
 
 ```js
-const { ReportBot } = require("reportbot");
+const { ReportBot } = require("report-bot");
 
 const RB = new ReportBot;
 
@@ -49,10 +48,10 @@ RB.changeCard("COLOR", "TITLE", "URL", "AUTHOR", "ICON", "DESCRIPTION", "FOOTER"
 ## Useful Links
 
 -   LinkedIn: https://www.linkedin.com/in/ardit-xhaferi/
--   Github: https://github.com/barbarbar338/reaction-role/
--   NPM: https://www.npmjs.com/package/reaction-role
--   Docs: https://reactionrole.bariscodes.me/
+-   Github: https://github.com/ArditXhaferi/report-bot-package
+-   NPM: https://www.npmjs.com/package/report-bot
+-   Docs: 
 
-## [Contact Me For More Help](https://bariscodes.me/discord)
+## [Contact Me For More Help](mailto:ardit@starlabspro.com)
 
-\ ゜ o ゜)ノ
+づ｡ ◕‿‿◕｡) づ

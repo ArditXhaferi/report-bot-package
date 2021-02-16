@@ -12,5 +12,25 @@
     "@pm2/io": "^4.3.5",
     "cron": "^1.8.2",
     "discord.js": "^12.5.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArditXhaferi/report-bot-package.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "role",
+    "reports",
+    "report",
+    "report-bot",
+    "discord-bot",
+    "report-manager",
+    "report-scheduler"
+  ],
+  "bugs": {
+    "url": "https://github.com/ArditXhaferi/report-bot-package/issues"
+  },
+  "homepage": "https://github.com/ArditXhaferi/report-bot-package#readme"
 }
