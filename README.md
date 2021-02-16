@@ -4,7 +4,7 @@
 ![weeklyDownloads](https://img.shields.io/npm/dw/report-bot?style=for-the-badge)
 ![version](https://img.shields.io/npm/v/report-bot?style=for-the-badge)
 ![license](https://img.shields.io/npm/l/report-bot?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/barbarbar338/report-bot?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/ArditXhaferi/report-bot-package?style=for-the-badge)
 
 # What is this?
 
