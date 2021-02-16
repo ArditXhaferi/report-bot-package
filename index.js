@@ -100,10 +100,4 @@ class ReportBot extends Discord.Client{
     }
 }
 
-RB = new ReportBot;
-RB.init("Njk5MDE4NDE2MjIwMTQzNjc3.XpORoQ.Hu-0Qo2byeJ1xjy8E9ABYeuQX1s", "676058051530326016", "report");
-RB.getUsers("679833392539500568", "* * * * *");
-RB.changeCard('#0099ff', 'test Reports');
-RB.scheduledMessage("676058051530326019", "*/2 * * * *");
-
 exports.ReportBot = ReportBot;

@@ -24,7 +24,11 @@ You also don't need to write any bot code if you want! You can also use this mod
 
 You have to turn on "Server Members Intent" option to use this package properly.
 
-![ReactionRoleWarningImage](https://raw.githubusercontent.com/barbarbar338/lib/master/personal_page/images/reaction-role-warning.png)
+![ReportBotWarningImage](https://raw.githubusercontent.com/barbarbar338/lib/master/personal_page/images/reaction-role-warning.png)
+
+# Image Example
+
+![ReportBotExampleImage](https://i.imgur.com/JEnUZx2.png)
 
 ## [Usage](#)
 
@@ -43,6 +47,8 @@ RB.scheduledMessage("CHANNEL", "CRONJOB");
 
 RB.changeCard("COLOR", "TITLE", "URL", "AUTHOR", "ICON", "DESCRIPTION", "FOOTER", "FOOTER_ICON");
 
+RB.alertUsers("CRONJOB", "MESSAGE");
+
 ```
 
 ## Useful Links
@@ -54,4 +60,4 @@ RB.changeCard("COLOR", "TITLE", "URL", "AUTHOR", "ICON", "DESCRIPTION", "FOOTER"
 
 ## [Contact Me For More Help](mailto:ardit@starlabspro.com)
 
-づ｡ ◕‿‿◕｡) づ
+づ｡ ◕‿◕｡) づ
