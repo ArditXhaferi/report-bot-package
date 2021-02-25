@@ -1,6 +1,6 @@
 {
   "name": "report-bot",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Discord bot to help manage reports at StarLabs",
   "main": "index.js",
   "scripts": {

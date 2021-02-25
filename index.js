@@ -10,10 +10,12 @@ myIntents.add('GUILD_PRESENCES', 'GUILD_MEMBERS');
 class ReportBot extends Discord.Client{
 
     init(token, guild, keyword){
-        
+
         this.login(token);
         
         this.employees = {};
+
+        this.onLeave = [];
         
         this.on('ready', () => {
             this.guild = this.guilds.cache.get(guild);
@@ -23,6 +25,19 @@ class ReportBot extends Discord.Client{
             let rep = message.content.toLowerCase();
             if (rep.includes(keyword)) {
                 delete this.employees[message.author.id];
+            }
+            if (rep.substring(0, 6) == "/leave") {
+                this.onLeave.push(message.author.id);
+                delete this.employees[message.author.id];
+                message.channel.send(message.author.username + " is now on leave.");
+            }
+            if (rep.substring(0, 5) == "/join") {
+                this.employees[message.author.id] = message.author.username;
+                this.indexS = this.onLeave.indexOf(message.author.id);
+                if (this.indexS > -1) {
+                    this.onLeave.splice(this.indexS, 1);
+                }
+                message.channel.send(message.author.username + " is back.");
             }
         })
 
@@ -52,6 +67,9 @@ class ReportBot extends Discord.Client{
                 let users = this.guild.roles.cache.get(role).members;
                 users.forEach(user => {
                     this.employees[user['user']['id']] = user['user']['username'];
+                })
+                this.onLeave.forEach(leave =>{
+                    delete this.employees[leave]
                 })
             });
 
