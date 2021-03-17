@@ -9,7 +9,7 @@ myIntents.add('GUILD_PRESENCES', 'GUILD_MEMBERS');
 
 class ReportBot extends Discord.Client{
 
-    init(token, guild, keyword){
+    init(token, guild, keyword, admin){
 
         this.login(token);
         
@@ -26,18 +26,49 @@ class ReportBot extends Discord.Client{
             if (rep.includes(keyword)) {
                 delete this.employees[message.author.id];
             }
-            if (rep.substring(0, 6) == "/leave") {
-                this.onLeave.push(message.author.id);
-                delete this.employees[message.author.id];
-                message.channel.send(message.author.username + " is now on leave.");
-            }
-            if (rep.substring(0, 5) == "/join") {
-                this.employees[message.author.id] = message.author.username;
-                this.indexS = this.onLeave.indexOf(message.author.id);
-                if (this.indexS > -1) {
-                    this.onLeave.splice(this.indexS, 1);
+            if(message.member.roles.cache.has(admin)){
+                if (rep.substring(0, 6) == "/leave") {
+                    var res = message.content.match(/([0-9])\w+/);
+                    let tag;
+                    try {
+                        tag = this.users.cache.get(res[0]);
+                      } catch (error) {
+                        message.channel.send("Please mention a real user.");
+                      }
+                    if(tag != null){
+                        this.onLeave.push(tag.id);
+                        delete this.employees[tag.id];
+                        message.channel.send(tag.username + " is now on leave.");
+                    }
                 }
-                message.channel.send(message.author.username + " is back.");
+                if (rep.substring(0, 5) == "/join") {
+                    var res = message.content.match(/([0-9])\w+/);
+                    let tag;
+                    try {
+                        tag = this.users.cache.get(res[0]);
+                      } catch (error) {
+                        message.channel.send("Please mention a real user.");
+                      }
+                    if(tag != null){
+                        this.employees[tag.id] = tag.username;
+                        this.indexS = this.onLeave.indexOf(tag.id);
+                        if (this.indexS > -1) {
+                            this.onLeave.splice(this.indexS, 1);
+                        }
+                        message.channel.send(tag.username + " is back.");
+                    }else{
+                        message.channel.send("Please mention a real user.");
+                    }
+                }
+                if (rep.substring(0, 5) == "/list") {
+                    let leaveListMessage = "Users on leave: \n";
+                    console.log(this.onLeave);
+                    this.onLeave.forEach(leaver => {
+                        let user = this.users.cache.get(leaver);
+                        leaveListMessage += user.username + "\n";
+                    });
+                    message.channel.send(leaveListMessage);
+                }
             }
         })
 

@@ -1,7 +1,7 @@
 {
   "name": "report-bot",
-  "version": "1.0.2",
-  "description": "Discord bot to help manage reports at StarLabs",
+  "version": "1.0.3",
+  "description": "ReportBot is a module that allows you to create Discord Daily Reports easily!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
