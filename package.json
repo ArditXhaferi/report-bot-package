@@ -1,6 +1,6 @@
 {
   "name": "report-bot",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ReportBot is a module that allows you to create Discord Daily Reports easily!",
   "main": "index.js",
   "scripts": {
